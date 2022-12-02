@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class EventOnWait : MonoBehaviour
 {
-    public float timeToWait;
+    public float timeToWait = 1f;
 
     public UnityEvent OnTimeComplete;
 
@@ -18,7 +18,7 @@ public class EventOnWait : MonoBehaviour
         {
             currentTime += Time.deltaTime;
 
-            if(currentTime > timeToWait)
+            if(currentTime >= timeToWait)
             {
                 waiting = false;
                 currentTime = 0;
